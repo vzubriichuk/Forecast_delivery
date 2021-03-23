@@ -4,13 +4,16 @@ block_cipher = None
 
 # need additional import for sklearn module
 from PyInstaller.utils.hooks import collect_submodules
-hidden_imports = collect_submodules('sklearn')
+hidden_imports_sklearn = collect_submodules('sklearn')
+hidden_imports_sklalchemy = collect_submodules('sqlalchemy')
+all_hidden_imports = hidden_imports_sklearn + hidden_imports_sklalchemy
+
 
 a = Analysis(['forecast_delivery.py'],
-             pathex=['C:\\Work\\Python_projects\\forecast_delivery'],
+             pathex=['C:\\Work\\Python_projects\\forecast_delivery\\src'],
              binaries=[],
              datas=[( '.\\resources\\*.ico', 'resources' )],
-             hiddenimports=hidden_imports,
+             hiddenimports=all_hidden_imports,
              hookspath=[],
              runtime_hooks=[],
              excludes=[],
