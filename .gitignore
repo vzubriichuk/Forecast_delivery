@@ -1,0 +1,12 @@
+.idea
+__pycache__
+build
+dist
+env
+src/
+
+#notebook
+forecast_delivery_notebook.ipynb
+
+# other files
+logfile1.txt
