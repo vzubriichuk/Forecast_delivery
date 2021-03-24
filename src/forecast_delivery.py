@@ -333,7 +333,7 @@ engine_export = create_engine("mssql+pyodbc:///?odbc_connect=%s" % params_export
 
 
 
-union_forecast_table_name = 'Ecom_Forecast_try'
+union_forecast_table_name = 'Ecom_Forecast'
 
 # непосредственно записываем почасовой и подневной прогнозы в таблицы
 # параметр if_exists должен быть append, если мы хотим сохранять историю предыдущих прогнозов
